@@ -1,8 +1,8 @@
 class BooksController < ApplicationController
-  # include ApplicationHelper
+  include ApplicationHelper
   before_action :set_book, only: %i[show edit update destroy]
   before_action :authenticate_user!
-  # before_action :is_admin?
+  before_action :is_admin?
 
   # GET /books or /books.json
   def index
