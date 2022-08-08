@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'documentatioon/index'
   root 'pages#home'
 
   use_doorkeeper
