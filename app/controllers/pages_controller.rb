@@ -8,4 +8,10 @@ class PagesController < ApplicationController
       client_secret: @application.secret
     }
   end
+
+  def about
+    
+  end
+  
+
 end

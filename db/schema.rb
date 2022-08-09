@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_06_050921) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_08_110932) do
   create_table "books", force: :cascade do |t|
     t.string "title"
     t.text "body"
@@ -46,6 +46,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_06_050921) do
     t.index ["uid"], name: "index_oauth_applications_on_uid", unique: true
   end
 
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "views", default: 0
+    t.integer "user_id", null: false
+    t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -60,4 +70,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_06_050921) do
   end
 
   add_foreign_key "oauth_access_tokens", "oauth_applications", column: "application_id"
+  add_foreign_key "posts", "users"
 end

@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
+  resources :posts
   get 'documentatioon/index'
   root 'pages#home'
-
+  get 'about', to: 'pages#about'
   use_doorkeeper
-  devise_for :users
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
+  }
   resources :books
 
   draw :api
