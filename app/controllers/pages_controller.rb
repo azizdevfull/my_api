@@ -1,5 +1,13 @@
 class PagesController < ApplicationController
   def home
+
+  end
+
+  def about
+    
+  end
+  
+  def client
     @application = Doorkeeper::Application.find_by(name: 'Web Client')
 
     @application = {
@@ -7,10 +15,6 @@ class PagesController < ApplicationController
       client_id: @application.uid,
       client_secret: @application.secret
     }
-  end
-
-  def about
-    
   end
   
 

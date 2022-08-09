@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'documentatioon/index'
   root 'pages#home'
   get 'about', to: 'pages#about'
+  get 'client', to: 'pages#client'
   use_doorkeeper
   devise_for :users, controllers: {
     sessions: 'users/sessions',
