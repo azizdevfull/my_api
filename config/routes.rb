@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  get 'documentation', to: 'documentation#index'
+  get 'documentation/users'
+  get 'documentation/posts'
+
   resources :posts
-  get 'documentatioon/index'
   root 'pages#home'
   get 'about', to: 'pages#about'
   get 'client', to: 'pages#client'
