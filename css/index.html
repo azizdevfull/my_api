@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="css/font/font.css" rel="stylesheet" />
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  </head>
+
+  <body>
+    <div class="preloader">
+      <img src="image/preloader/spinner.gif"/>
+    </div>
+    <div class="content-area">
+      <header>
+        <div>
+          <nav class="top-nav">
+            <div class="nav-wrapper">
+              <h1 class="header-title"><a href="#">API DOCS</a></h1>
+            </div>
+            <div>
+              <a
+                href="#"
+                data-target="slide-out"
+                class="top-nav sidenav-trigger hide-on-large-only"
+                ><i class="material-icons">menu</i></a
+              >
+            </div>
+          </nav>
+        </div>
+
+        <ul id="slide-out" class="sidenav sidenav-fixed">
+          <div class="side-nav-close hide-on-large-only sidenav-close">
+            <i class="material-icons">close</i>
+            <span>Close</span>
+          </div>
+          <div class="sidenav-top">
+            <span>Welcome Chief</span>
+          </div>
+          <ul class="collapsible collapsible-accordion">
+            <li class="menu-item">
+              <a
+                class="collapsible-header waves-effect sidenav-close"
+                href="#authentication"
+                >Authentication</a
+              >
+              <div class="collapsible-body"></div>
+            </li>
+            <li>
+              <a class="collapsible-header waves-effect" href="#classes">Classes</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li class="sub-menu-item sidenav-close">
+                    <a class="waves-effect" href="#get-classes">Get Classes</a>
+                  </li>
+                  <li class="sub-menu-item sidenav-close">
+                    <a class="waves-effect" href="#get-class">Get Class</a>
+                  </li>
+                  <li class="sub-menu-item sidenav-close">
+                    <a class="waves-effect" href="#post-class">Add Class</a>
+                  </li>
+                  <li class="sub-menu-item sidenav-close">
+                    <a class="waves-effect" href="#put-class">Update Class</a>
+                  </li>
+                  <li class="sub-menu-item sidenav-close">
+                    <a class="waves-effect" href="#delete-class">Delete Class</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a class="collapsible-header waves-effect" href="#subjects">Subjects</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li class="sub-menu-item sidenav-close">
+                    <a class="waves-effect" href="#get-subjects">Get Subjcts</a>
+                  </li>
+                  <li class="sub-menu-item sidenav-close">
+                    <a class="waves-effect" href="#get-subject">Get Subjct</a>
+                  </li>
+                  <li class="sub-menu-item sidenav-close">
+                    <a class="waves-effect" href="#post-subject">Add Subject</a>
+                  </li>
+                  <li class="sub-menu-item sidenav-close">
+                    <a class="waves-effect" href="#put-subject"
+                      >Update Subject</a
+                    >
+                  </li>
+                  <li class="sub-menu-item sidenav-close">
+                    <a class="waves-effect" href="#delete-subject"
+                      >Delete Subject</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <a class="collapsible-header waves-effect" href="#chapters">Chapteers</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li class="sub-menu-item sidenav-close">
+                    <a class="waves-effect" href="#get-chapters">Get Chapters</a>
+                  </li>
+                  <li class="sub-menu-item sidenav-close">
+                    <a class="waves-effect" href="#get-chapter">Get Chapter</a>
+                  </li>
+                  <li class="sub-menu-item sidenav-close">
+                    <a class="waves-effect" href="#post-chapter">Add Chapter</a>
+                  </li>
+                  <li class="sub-menu-item sidenav-close">
+                    <a class="waves-effect" href="#put-chapter"
+                      >Update Chapter</a
+                    >
+                  </li>
+                  <li class="sub-menu-item sidenav-close">
+                    <a class="waves-effect" href="#delete-chapter"
+                      >Delete Chapter</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <a class="collapsible-header waves-effect" href="#questions">Questions</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li class="sub-menu-item sidenav-close">
+                    <a class="waves-effect" href="#get-questions"
+                      >Get Questions</a
+                    >
+                  </li>
+                  <li class="sub-menu-item sidenav-close">
+                    <a class="waves-effect" href="#get-paginated-questions"
+                      >Get Paginated Questions</a
+                    >
+                  </li>
+                  <li class="sub-menu-item sidenav-close">
+                    <a class="waves-effect" href="#get-question"
+                      >Get Question</a
+                    >
+                  </li>
+                  <li class="sub-menu-item sidenav-close">
+                    <a class="waves-effect" href="#post-question">Add Question</a>
+                  </li>
+                  <li class="sub-menu-item sidenav-close">
+                    <a class="waves-effect" href="#put-question"
+                      >Update Question</a
+                    >
+                  </li>
+                  <li class="sub-menu-item sidenav-close">
+                    <a class="waves-effect" href="#delete-question"
+                      >Delete Question</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="menu-item sidenav-close">
+              <a class="collapsible-header waves-effect" href="#success-response"
+                >Success Response</a
+              >
+              <div class="collapsible-body"></div>
+            </li>
+            <li class="menu-item sidenav-close">
+              <a class="collapsible-header waves-effect" href="#error-response"
+                >Error Response</a
+              >
+              <div class="collapsible-body"></div>
+            </li>
+          </ul>
+        </ul>
+      </header>
+
+      <div class="content">
+
+        <section id="authentication" class="section scrollspy">
+          <div class="container">
+            <div>
+              <div class="section-heading">
+                <span>Authenticaton</span>
+              </div>
+
+              <div class="section-description-top">
+                Details
+              </div>
+
+              <div class="res-param-heading">
+                <span>Header Params</span>
+              </div>
+
+              <div class="list-table-container">
+                <table class="list-table">
+                  <tr>
+                    <th>Param</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>Content-Type</td>
+                    <td>String</td>
+                    <td>application/json</td>
+                  </tr>
+                  <tr>
+                    <td>Accept</td>
+                    <td>String</td>
+                    <td>application/json</td>
+                  </tr>
+                  <tr>
+                    <td>token</td>
+                    <td>String</td>
+                    <td>application/json</td>
+                  </tr>
+                  </tr>
+                </table>
+              </div>
+              
+              <div class="res-param-heading">
+                <span>Header Params Example:</span>
+              </div>
+              <div class="codeDiv">
+                <textarea class="materialize-textarea codeBox" placeholder="Code" readonly>
+    {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "Token": " Your Token"
+    }
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Classes Section Start -->
+        <section class="section">
+          <div class="container">
+            <div>
+              <div class="section-heading">
+                <span>Classes</span>
+              </div>
+
+              <!-- Get Classes Start -->
+              <div id="get-classes" class="scrollspy">
+                <div class="section-sub-heading">
+                  <span>Get Classes</span>
+                </div>
+                <div class="url-container">
+                  <div class="method">Get</div>
+                  /classes
+                </div>
+                <div class="res-param-heading">
+                  <span>Response Params</span>
+                </div>
+
+                <div class="list-table-container">
+                  <table class="list-table">
+                    <tr>
+                      <th>Param</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                    </tr>
+                    <tr>
+                      <td>error</td>
+                      <td>Boolean</td>
+                      <td>Error will be false if requist success</td>
+                    </tr>
+                    <tr>
+                      <td>data</td>
+                      <td>Object[]</td>
+                      <td>Array of class object</td>
+                    </tr>
+                    <tr>
+                      <td>id</td>
+                      <td>Number</td>
+                      <td>Class id</td>
+                    </tr>
+                    <tr>
+                      <td>class</td>
+                      <td>String</td>
+                      <td>Class name</td>
+                    </tr>
+                    <tr>
+                      <td>subject_path</td>
+                      <td>String</td>
+                      <td>Get all subjects using this path</td>
+                    </tr>
+                    </tr>
+                  </table>
+                </div>
+                
+                <div class="res-param-heading">
+                  <span>Response Example:</span>
+                </div>
+                <div class="codeDiv">
+                  <textarea class="materialize-textarea codeBox" placeholder="Code" readonly>
+    200 OK
+    {
+    "error":false,
+    "data": [
+      {
+        "id": 1,
+        "class_name": "BBA 1ST",
+        "subjects_path": "class/1/subjects"
+      },
+      {
+        "id": 2,
+        "class_name": "BBA 2ND",
+        "subjects_path": "class/2/subjects"
+      },
+      {
+          "id": 3,
+          "class_name": "BBA 3RD",
+          "subjects_path": "class/3/subjects"
+      },
+      {
+          "id": 4,
+          "class_name": "BBA 4TH",
+          "subjects_path": "class/4/subjects"
+      }
+    ]
+    }
+                  </textarea>
+                </div>
+                <div class="section-description-bottom">
+                  On Error <a href="#error-response">View Response</a>
+              </div>
+              </div>
+              <!-- Get Classes End -->
+
+              <!-- Get  Class Start -->
+              <div id="get-class" class="scrollspy">
+                <div class="section-sub-heading">
+                  <span>Get Class</span>
+                </div>
+                <div class="url-container">
+                  <div class="method">Get</div>
+                  /class/:id
+                </div>
+                <div class="res-param-heading">
+                  <span>URL Params</span>
+                </div>
+
+                <div class="list-table-container">
+                  <table class="list-table">
+                    <tr>
+                      <th>Param</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                    </tr>
+                    <tr>
+                      <td>id</td>
+                      <td>Number</td>
+                      <td>Class id</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="res-param-heading">
+                  <span>Response Params</span>
+                </div>
+
+                <div class="list-table-container">
+                  <table class="list-table">
+                    <tr>
+                      <th>Param</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                    </tr>
+                    <tr>
+                      <td>error</td>
+                      <td>Boolean</td>
+                      <td>Error will be false if requist success</td>
+                    </tr>
+                    <tr>
+                      <td>data</td>
+                      <td>Object</td>
+                      <td>Class Data Object</td>
+                    </tr>
+                    <tr>
+                      <td>id</td>
+                      <td>Number</td>
+                      <td>Class id</td>
+                    </tr>
+                    <tr>
+                      <td>class</td>
+                      <td>String</td>
+                      <td>Class name</td>
+                    </tr>
+                    <tr>
+                      <td>subject_path</td>
+                      <td>String</td>
+                      <td>Get all subjects using this path</td>
+                    </tr>
+                    </tr>
+                  </table>
+                </div>
+                
+                <div class="res-param-heading">
+                  <span>Response Example:</span>
+                </div>
+                <div class="codeDiv">
+                  <textarea class="materialize-textarea codeBox" placeholder="Code" readonly>
+    200 OK
+    {
+      "error": false,
+      "data":{
+          "id":1,
+          "class":"BBA 1st"
+          "subjects_path": "class/1/subjects"
+      }
+    }
+                  </textarea>
+                </div>
+                <div class="section-description-bottom">
+                  On Error <a href="#error-response">View Response</a>
+              </div>
+              </div>
+              <!-- Get Class End -->
+
+              <!-- Add Class Start -->
+              <div id="post-class" class="scrollspy">
+                <div class="section-sub-heading">
+                  <span>Add Class</span>
+                </div>
+                <div class="url-container">
+                  <div class="method">Post</div>
+                  /class
+                </div>
+                <div class="res-param-heading">
+                  <span>Request Params</span>
+                </div>
+
+                <div class="list-table-container">
+                  <table class="list-table">
+                    <tr>
+                      <th>Param</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                    </tr>
+                    <tr>
+                      <td>class</td>
+                      <td>String</td>
+                      <td>Class name/Course Name</td>
+                    </tr>
+                    </tr>
+                  </table>
+                </div>
+                
+                <div class="res-param-heading">
+                  <span>Request Example:</span>
+                </div>
+                <div class="codeDiv">
+                  <textarea class="materialize-textarea codeBox" placeholder="Code" readonly>
+    {
+    "class": "10"
+    }
+                  </textarea>
+                </div>
+                <div class="section-description-bottom">
+                  On Success <a href="#success-response">View Response</a> <b>OR</b> 
+                  On Error <a href="#error-response">View Response</a>
+              </div>
+              </div>
+              <!-- Add Class End -->
+
+              <!-- Update Class Start -->
+              <div id="put-class" class="scrollspy">
+                <div class="section-sub-heading">
+                  <span>Update Class</span>
+                </div>
+                <div class="url-container">
+                  <div class="method">Put</div>
+                  /class/:id
+                </div>
+                <div class="res-param-heading">
+                  <span>URL Params</span>
+                </div>
+
+                <div class="list-table-container">
+                  <table class="list-table">
+                    <tr>
+                      <th>Param</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                    </tr>
+                    <tr>
+                      <td>id</td>
+                      <td>Number</td>
+                      <td>Class id</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="res-param-heading">
+                  <span>Request Params</span>
+                </div>
+
+                <div class="list-table-container">
+                  <table class="list-table">
+                    <tr>
+                      <th>Param</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                    </tr>
+                    <tr>
+                      <td>class</td>
+                      <td>String</td>
+                      <td>Class name/Course Name</td>
+                    </tr>
+                    </tr>
+                  </table>
+                </div>
+                
+                <div class="res-param-heading">
+                  <span>Request Example:</span>
+                </div>
+                <div class="codeDiv">
+                  <textarea class="materialize-textarea codeBox" placeholder="Code" readonly>
+    {
+    "class": "10"
+    }            
+                  </textarea>
+                </div>
+                <div class="section-description-bottom">
+                  On Success <a href="#success-response">View Response</a> <b>OR</b> 
+                  On Error <a href="#error-response">View Response</a>
+              </div>
+              </div>
+              <!-- Update Class End -->
+
+              <!-- Delete Class Start -->
+              <div id="delete-class" class="scrollspy">
+                <div class="section-sub-heading">
+                  <span>Delete Class</span>
+                </div>
+                <div class="url-container">
+                  <div class="method">Delete</div>
+                  /class/:id
+                </div>
+                <div class="res-param-heading">
+                  <span>URL Params</span>
+                </div>
+
+                <div class="list-table-container">
+                  <table class="list-table">
+                    <tr>
+                      <th>Param</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                    </tr>
+                    <tr>
+                      <td>id</td>
+                      <td>Number</td>
+                      <td>Class id</td>
+                    </tr>
+                    </tr>
+                  </table>
+                </div>
+                <div class="section-description-bottom" style="margin: 5px 0px;">
+                    On Success <a href="#success-response">View Response</a> <b>OR</b> 
+                    On Error <a href="#error-response">View Response</a>
+                </div>
+              </div>
+              <!-- Delete Class End -->
+
+            </div>
+          </div>
+        </section>
+        <!-- Classes Section End -->
+
+        <!-- Subjects Section Start -->
+        <section class="section">
+          <div class="container">
+            <div>
+              <div class="section-heading">
+                <span>Subjects</span>
+              </div>
+
+              <!-- Get Subjects Start -->
+              <div id="get-subjects" class="scrollspy">
+                <div class="section-sub-heading">
+                  <span>Get Subjects</span>
+                </div>
+                <div class="url-container">
+                  <div class="method">Get</div>
+                  class/:class_id/subjects
+                </div>
+                <div class="res-param-heading">
+                  <span>URL Params</span>
+                </div>
+
+                <div class="list-table-container">
+                  <table class="list-table">
+                    <tr>
+                      <th>Param</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                    </tr>
+                    <tr>
+                      <td>class_id</td>
+                      <td>Number</td>
+                      <td>Class id</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="res-param-heading">
+                  <span>Response Params</span>
+                </div>
+
+                <div class="list-table-container">
+                  <table class="list-table">
+                    <tr>
+                      <th>Param</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                    </tr>
+                    <tr>
+                      <td>error</td>
+                      <td>Boolean</td>
+                      <td>Error will be false if requist success</td>
+                    </tr>
+                    <tr>
+                      <td>data</td>
+                      <td>Object[]</td>
+                      <td>Array of subject object</td>
+                    </tr>
+                    <tr>
+                      <td>id</td>
+                      <td>Number</td>
+                      <td>Subject  id</td>
+                    </tr>
+                    <tr>
+                      <td>class_id</td>
+                      <td>Number</td>
+                      <td>Class id</td>
+                    </tr>
+                    <tr>
+                      <td>subject</td>
+                      <td>String</td>
+                      <td>Subject Name</td>
+                    </tr>
+                    <tr>
+                      <td>chapters_path</td>
+                      <td>String</td>
+                      <td>Path for get all chapters of a subject</td>
+                    </tr>
+                  </table>
+                </div>
+                
+                <div class="res-param-heading">
+                  <span>Response Example:</span>
+                </div>
+                <div class="codeDiv">
+                  <textarea class="materialize-textarea codeBox" placeholder="Code" readonly>
+    200 OK
+    {
+    "error": false,
+    "data" : [
+                {
+                  "id": 1,
+                  "subject": "Bangla"
+                  "chapters_path" : "subject/1/chapters"
+                },
+                {
+                  "id": 2,
+                  "subject": "English"
+                  "chapters_path" : "subject/2/chapters"
+                },
+                {
+                  "id": 3,
+                  "subject": "Math"
+                  "chapters_path" : "subject/3/chapters"
+                }
+            ]
+    }
+                  </textarea>
+                </div>
+                <div class="section-description-bottom">
+                  On Error <a href="#error-response">View Response</a>
+                </div>
+              </div>
+              <!-- Get Subjects End -->
+
+              <!-- Get  Subject Start -->
+              <div id="get-subject" class="scrollspy">
+                <div class="section-sub-heading">
+                  <span>Get Subject</span>
+                </div>
+                <div class="url-container">
+                  <div class="method">Get</div>
+                  /class/:class_id/subject/:id
+                </div>
+                <div class="res-param-heading">
+                  <span>URL Params</span>
+                </div>
+
+                <div class="list-table-container">
+                  <table class="list-table">
+                    <tr>
+                      <th>Param</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                    </tr>
+                    <tr>
+                      <td>class_id</td>
+                      <td>Number</td>
+                      <td>Class id</td>
+                    </tr>
+                    <tr>
+                      <td>id</td>
+                      <td>Number</td>
+                      <td>Subject id</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="res-param-heading">
+                  <span>Response Params</span>
+                </div>
+
+                <div class="list-table-container">
+                  <table class="list-table">
+                    <tr>
+                      <th>Param</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                    </tr>
+                    <tr>
+                      <td>error</td>
+                      <td>Boolean</td>
+                      <td>Error will be false if requist success</td>
+                    </tr>
+                    <tr>
+                      <td>data</td>
+                      <td>Object</td>
+                      <td>Object of a Subject</td>
+                    </tr>
+                    <tr>
+                      <td>id</td>
+                      <td>Number</td>
+                      <td>Subject Id</td>
+                    </tr>
+                    <tr>
+                      <td>class_id</td>
+                      <td>Number</td>
+                      <td>Class  Id</td>
+                    </tr>
+                    <tr>
+                      <td>subject</td>
+                      <td>String</td>
+                      <td>Subject Name</td>
+                    </tr>
+                    <tr>
+                      <td>chapter_path</td>
+                      <td>String</td>
+                      <td>Path for get all chapters of a subject</td>
+                    </tr>
+                    </tr>
+                  </table>
+                </div>
+                
+                <div class="res-param-heading">
+                  <span>Response Example:</span>
+                </div>
+                <div class="codeDiv">
+                  <textarea class="materialize-textarea codeBox" placeholder="Code" readonly>
+    200 OK
+    {
+    "error": false,
+    "data" : {
+                "id": 1,
+                "class_id": 1,
+                "subject": "Bangla"
+                "chapter_path" : "subject/1/chapters"
+            }
+    }
+                  </textarea>
+                </div>
+                <div class="section-description-bottom">
+                  On Error <a href="#error-response">View Response</a>
+                </div>
+              </div>
+              <!-- Get Subject End -->
+
+              <!-- Add Subject Start -->
+              <div id="post-subject" class="scrollspy">
+                <div class="section-sub-heading">
+                  <span>Add Subject</span>
+                </div>
+                <div class="url-container">
+                  <div class="method">Post</div>
+                  /subject
+                </div>
+                <div class="res-param-heading">
+                  <span>Request Params</span>
+                </div>
+
+                <div class="list-table-container">
+                  <table class="list-table">
+                    <tr>
+                      <th>Param</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                    </tr>
+                    <tr>
+                      <td>class_id</td>
+                      <td>Number</td>
+                      <td>Class id</td>
+                    </tr>
+                    <tr>
+                      <td>subject</td>
+                      <td>String</td>
+                      <td>Subject Name</td>
+                    </tr>
+                    </tr>
+                  </table>
+                </div>
+                
+                <div class="res-param-heading">
+                  <span>Request Example:</span>
+                </div>
+                <div class="codeDiv">
+                  <textarea class="materialize-textarea codeBox" placeholder="Code" readonly>
+    {
+    "class_id": 1,
+    "subject": "Bangla"
+    }
+                  </textarea>
+                </div>
+                <div class="section-description-bottom">
+                  On Success <a href="#success-response">View Response</a> <b>OR</b> 
+                  On Error <a href="#error-response">View Response</a>
+                </div>
+              </div>
+              <!-- Add Subject End -->
+
+              <!-- Update Subject Start -->
+              <div id="put-subject" class="scrollspy">
+                <div class="section-sub-heading">
+                  <span>Update Subject</span>
+                </div>
+                <div class="url-container">
+                  <div class="method">Put</div>
+                  /subject/:id
+                </div>
+                <div class="res-param-heading">
+                  <span>URL Params</span>
+                </div>
+
+                <div class="list-table-container">
+                  <table class="list-table">
+                    <tr>
+                      <th>Param</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                    </tr>
+                    <tr>
+                      <td>id</td>
+                      <td>Number</td>
+                      <td>Subject id</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="res-param-heading">
+                  <span>Request Params</span>
+                </div>
+
+                <div class="list-table-container">
+                  <table class="list-table">
+                    <tr>
+                      <th>Param</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                    </tr>
+                    <tr>
+                      <td>class_id</td>
+                      <td>Number</td>
+                      <td>Class id</td>
+                    </tr>
+                    <tr>
+                      <td>subject</td>
+                      <td>String</td>
+                      <td>Subject Name</td>
+                    </tr>
+                    </tr>
+                  </table>
+                </div>
+                
+                <div class="res-param-heading">
+                  <span>Request Example:</span>
+                </div>
+                <div class="codeDiv">
+                  <textarea class="materialize-textarea codeBox" placeholder="Code" readonly>
+    {
+    "class_id": 1,
+    "subject": "Bangla"
+    }          
+                  </textarea>
+                </div>
+                <div class="section-description-bottom">
+                  On Success <a href="#success-response">View Response</a> <b>OR</b> 
+                  On Error <a href="#error-response">View Response</a>
+              </div>
+              </div>
+              <!-- Update Subject End -->
+
+              <!-- Delete Subject Start -->
+              <div id="delete-subject" class="scrollspy">
+                <div class="section-sub-heading">
+                  <span>Delete Subject</span>
+                </div>
+                <div class="url-container">
+                  <div class="method">Delete</div>
+                  /subject/:id
+                </div>
+                <div class="res-param-heading">
+                  <span>URL Params</span>
+                </div>
+
+                <div class="list-table-container">
+                  <table class="list-table">
+                    <tr>
+                      <th>Param</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                    </tr>
+                    <tr>
+                      <td>id</td>
+                      <td>Number</td>
+                      <td>Class id</td>
+                    </tr>
+                    </tr>
+                  </table>
+                </div>
+                <div class="section-description-bottom" style="margin: 5px 0px;">
+                    On Success <a href="#success-response">View Response</a> <b>OR</b> 
+                    On Error <a href="#error-response">View Response</a>
+                </div>
+              </div>
+              <!-- Delete Subject End -->
+
+            </div>
+          </div>
+        </section>
+        <!-- Subjects Section End -->
+
+        <!-- Chapters Section Start -->
+        <section class="section">
+          <div class="container">
+            <div>
+              <div class="section-heading">
+                <span>Chapters</span>
+              </div>
+
+              <!-- Get Chapters Start -->
+              <div id="get-chapters" class="scrollspy">
+                <div class="section-sub-heading">
+                  <span>Get Chapters</span>
+                </div>
+                <div class="url-container">
+                  <div class="method">Get</div>
+                  /subject/:subject_id/chapters
+                </div>
+                <div class="res-param-heading">
+                  <span>URL Params</span>
+                </div>
+
+                <div class="list-table-container">
+                  <table class="list-table">
+                    <tr>
+                      <th>Param</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                    </tr>
+                    <tr>
+                      <td>subject_id</td>
+                      <td>Number</td>
+                      <td>Subject id</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="res-param-heading">
+                  <span>Response Params</span>
+                </div>
+
+                <div class="list-table-container">
+                  <table class="list-table">
+                    <tr>
+                      <th>Param</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                    </tr>
+                    <tr>
+                      <td>error</td>
+                      <td>Boolean</td>
+                      <td>Error will be false if requist success</td>
+                    </tr>
+                    <tr>
+                      <td>data</td>
+                      <td>Object[]</td>
+                      <td>Array of chapter object</td>
+                    </tr>
+                    <tr>
+                      <td>id</td>
+                      <td>Number</td>
+                      <td>Subject Id</td>
+                    </tr>
+                    <tr>
+                      <td>chapter</td>
+                      <td>String</td>
+                      <td>Chapter Name</td>
+                    </tr>
+                    <tr>
+                      <td>questions_path</td>
+                      <td>String</td>
+                      <td>Path for get all questions of a chapte</td>
+                    </tr>
+                    </tr>
+                  </table>
+                </div>
+                
+                <div class="res-param-heading">
+                  <span>Response Example:</span>
+                </div>
+                <div class="codeDiv">
+                  <textarea class="materialize-textarea codeBox" placeholder="Code" readonly>
+    200 OK
+    {
+    "error": false,
+    "data" : [
+                {
+                  "id": 1,
+                  "chapter": "Chapter1"
+                  "questions_path" : "chapter/1/questions"
+                },
+                {
+                  "id": 2,
+                  "chapter": "Chapter2"
+                  "questions_path" : "chapter/2/questions"
+                },
+                {
+                  "id": 3,
+                  "chapter": "Chapter3"
+                  "questions_path" : "chapter/3/questions"
+                }
+            ]
+    }
+                  </textarea>
+                </div>
+                <div class="section-description-bottom">
+                  On Error <a href="#error-response">View Response</a>
+                </div>
+              </div>
+              <!-- Get Chapters End -->
+
+              <!-- Get  Chapter Start -->
+              <div id="get-chapter" class="scrollspy">
+                <div class="section-sub-heading">
+                  <span>Get Chapter</span>
+                </div>
+                <div class="url-container">
+                  <div class="method">Get</div>
+                  /subject/:subject_id/chapter/:id
+                </div>
+                <div class="res-param-heading">
+                  <span>URL Params</span>
+                </div>
+
+                <div class="list-table-container">
+                  <table class="list-table">
+                    <tr>
+                      <th>Param</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                    </tr>
+                    <tr>
+                      <td>subject_id</td>
+                      <td>Number</td>
+                      <td>Subject id</td>
+                    </tr>
+                    <tr>
+                      <td>id</td>
+                      <td>Number</td>
+                      <td>Chapter id</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="res-param-heading">
+                  <span>Response Params</span>
+                </div>
+
+                <div class="list-table-container">
+                  <table class="list-table">
+                    <tr>
+                      <th>Param</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                    </tr>
+                    <tr>
+                      <td>error</td>
+                      <td>Boolean</td>
+                      <td>Error will be false if requist success</td>
+                    </tr>
+                    <tr>
+                      <td>data</td>
+                      <td>Object</td>
+                      <td>Subject object</td>
+                    </tr>
+                    <tr>
+                      <td>id</td>
+                      <td>Number</td>
+                      <td>Chapter id</td>
+                    </tr>
+                    <tr>
+                      <td>subject_id</td>
+                      <td>Number</td>
+                      <td>Subject Id</td>
+                    </tr>
+                    <tr>
+                      <td>chapter</td>
+                      <td>String</td>
+                      <td>Chapter name</td>
+                    </tr>
+                    <tr>
+                      <td>questions_path</td>
+                      <td>String</td>
+                      <td>Path for get all questions of a chapter</td>
+                    </tr>
+                    </tr>
+                  </table>
+                </div>
+                
+                <div class="res-param-heading">
+                  <span>Response Example:</span>
+                </div>
+                <div class="codeDiv">
+                  <textarea class="materialize-textarea codeBox" placeholder="Code" readonly>
+    200 OK
+    {
+    "error": false,
+    "data" :
+                {
+                  "id": 1,
+                  "subject_id": 1,
+                  "chapter": "Chapter 1"
+                  "questions_path" : "chapter/1/questions"
+                }
+    }
+                  </textarea>
+                </div>
+                <div class="section-description-bottom">
+                  On Error <a href="#error-response">View Response</a>
+                </div>
+              </div>
+              <!-- Get Chapter End -->
+
+              <!-- Add Chapter Start -->
+              <div id="post-chapter" class="scrollspy">
+                <div class="section-sub-heading">
+                  <span>Add Chapter</span>
+                </div>
+                <div class="url-container">
+                  <div class="method">Post</div>
+                  /chapter
+                </div>
+                <div class="res-param-heading">
+                  <span>Request Params</span>
+                </div>
+
+                <div class="list-table-container">
+                  <table class="list-table">
+                    <tr>
+                      <th>Param</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                    </tr>
+                    <tr>
+                      <td>subject_id</td>
+                      <td>Number</td>
+                      <td>Subject id</td>
+                    </tr>
+                    <tr>
+                      <td>chapter</td>
+                      <td>String</td>
+                      <td>Chapter name</td>
+                    </tr>
+                    </tr>
+                  </table>
+                </div>
+                
+                <div class="res-param-heading">
+                  <span>Request Example:</span>
+                </div>
+                <div class="codeDiv">
+                  <textarea class="materialize-textarea codeBox" placeholder="Code" readonly>
+    {
+    "subject_id": 1,
+    "chapter": "Chapter 1"
+    }
+                  </textarea>
+                </div>
+                <div class="section-description-bottom">
+                  On Success <a href="#success-response">View Response</a> <b>OR</b> 
+                  On Error <a href="#error-response">View Response</a>
+                </div>
+              </div>
+              <!-- Add Chapter End -->
+
+              <!-- Update Chapter Start -->
+              <div id="put-chapter" class="scrollspy">
+                <div class="section-sub-heading">
+                  <span>Update Chapter</span>
+                </div>
+                <div class="url-container">
+                  <div class="method">Put</div>
+                  /chapter/:id
+                </div>
+                <div class="res-param-heading">
+                  <span>URL Params</span>
+                </div>
+
+                <div class="list-table-container">
+                  <table class="list-table">
+                    <tr>
+                      <th>Param</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                    </tr>
+                    <tr>
+                      <td>id</td>
+                      <td>Number</td>
+                      <td>Chapter id</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="res-param-heading">
+                  <span>Request Params</span>
+                </div>
+
+                <div class="list-table-container">
+                  <table class="list-table">
+                    <tr>
+                      <th>Param</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                    </tr>
+                    <tr>
+                      <td>subject_id</td>
+                      <td>Number</td>
+                      <td>Subject id</td>
+                    </tr>
+                    <tr>
+                      <td>chapter</td>
+                      <td>String</td>
+                      <td>Chapter name</td>
+                    </tr>
+                    </tr>
+                  </table>
+                </div>
+                
+                <div class="res-param-heading">
+                  <span>Request Example:</span>
+                </div>
+                <div class="codeDiv">
+                  <textarea class="materialize-textarea codeBox" placeholder="Code" readonly>
+    {
+    "subject_id": 1,
+    "chapter": "Chapter 1"
+    }
+                  </textarea>
+                </div>
+                <div class="section-description-bottom">
+                  On Success <a href="#success-response">View Response</a> <b>OR</b> 
+                  On Error <a href="#error-response">View Response</a>
+              </div>
+              </div>
+              <!-- Update Chapter End -->
+
+              <!-- Delete Chapter Start -->
+              <div id="delete-chapter" class="scrollspy">
+                <div class="section-sub-heading">
+                  <span>Delete Chapter</span>
+                </div>
+                <div class="url-container">
+                  <div class="method">Delete</div>
+                  /chapter/:id
+                </div>
+                <div class="res-param-heading">
+                  <span>URL Params</span>
+                </div>
+
+                <div class="list-table-container">
+                  <table class="list-table">
+                    <tr>
+                      <th>Param</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                    </tr>
+                    <tr>
+                      <td>id</td>
+                      <td>Number</td>
+                      <td>Chapter id</td>
+                    </tr>
+                    </tr>
+                  </table>
+                </div>
+                <div class="section-description-bottom" style="margin: 5px 0px;">
+                    On Success <a href="#success-response">View Response</a> <b>OR</b> 
+                    On Error <a href="#error-response">View Response</a>
+                </div>
+              </div>
+              <!-- Delete Chapter End -->
+
+            </div>
+          </div>
+        </section>
+        <!-- Chapters Section End -->
+
+      <!-- Questions Section Start -->
+      <section class="section">
+        <div class="container">
+          <div>
+            <div class="section-heading">
+              <span>Questions</span>
+            </div>
+
+            <!-- Get Questions Start -->
+            <div id="get-questions" class="scrollspy">
+              <div class="section-sub-heading">
+                <span>Get Questions</span>
+              </div>
+              <div class="url-container">
+                <div class="method">Get</div>
+                /chapter/:chapter_id/questions
+              </div>
+              <div class="res-param-heading">
+                <span>URL Params</span>
+              </div>
+
+              <div class="list-table-container">
+                <table class="list-table">
+                  <tr>
+                    <th>Param</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>chapter_id</td>
+                    <td>Number</td>
+                    <td>
+                      Chapter id
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="res-param-heading">
+                <span>Response Params</span>
+              </div>
+
+              <div class="list-table-container">
+                <table class="list-table">
+                  <tr>
+                    <th>Param</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>error</td>
+                    <td>Boolean</td>
+                    <td>Error will be false if requist success</td>
+                  </tr>
+                  <tr>
+                    <td>data</td>
+                    <td>Object[]</td>
+                    <td>Array of question object</td>
+                  </tr>
+                  <tr>
+                    <td>id</td>
+                    <td>Number</td>
+                    <td>Question id</td>
+                  </tr>
+                  <tr>
+                    <td>chapter_id</td>
+                    <td>Number</td>
+                    <td>Chapter id</td>
+                  </tr>
+                  <tr>
+                    <td>question</td>
+                    <td>String</td>
+                    <td>Question</td>
+                  </tr>
+                  <tr>
+                    <td>answer</td>
+                    <td>String</td>
+                    <td>Answer</td>
+                  </tr>
+                  <tr>
+                    <td>question_path</td>
+                    <td>String</td>
+                    <td>Path for get a questions</td>
+                  </tr>
+                  </tr>
+                </table>
+              </div>
+              
+              <div class="res-param-heading">
+                <span>Response Example:</span>
+              </div>
+              <div class="codeDiv">
+                <textarea class="materialize-textarea codeBox" placeholder="Code" readonly>
+    200 OK
+    {
+    "error": false,
+    "data" : [
+                {
+                  "id": 1,
+                  "chapter_id": 1,
+                  "question": "Question 1"
+                  "answer": "Answer 1"
+                  "question_path" : "chapter/1/question/1"
+                },
+                  "id": 1,
+                  "chapter_id": 2,
+                  "question": "Question 1"
+                  "answer": "Answer 1"
+                  "question_path" : "chapter/2/question/1"
+                },
+                  "id": 3,
+                  "chapter_id": 3,
+                  "question": "Question 3"
+                  "answer": "Answer 3"
+                  "question_path" : "chapter/3/question/3"
+                }
+            ]
+    }
+                </textarea>
+              </div>
+              <div class="section-description-bottom">
+                On Error <a href="#error-response">View Response</a>
+              </div>
+            </div>
+            <!-- Get Questions End -->
+
+            <!-- Get  Questions Start -->
+            <div id="get-paginated-questions" class="scrollspy">
+              <div class="section-sub-heading">
+                <span>Get Paginated Question</span>
+              </div>
+              <div class="url-container">
+                <div class="method">Get</div>
+                /chapter/:chapter_id/questions?page=1&limit=10
+              </div>
+              <div class="res-param-heading">
+                <span>URL Params</span>
+              </div>
+
+              <div class="list-table-container">
+                <table class="list-table">
+                  <tr>
+                    <th>Param</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>chapter_id</td>
+                    <td>Number</td>
+                    <td>Chapter id</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="res-param-heading">
+                <span>Query Params</span>
+              </div>
+
+              <div class="list-table-container">
+                <table class="list-table">
+                  <tr>
+                    <th>Param</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>page</td>
+                    <td>Number</td>
+                    <td>Page Number</td>
+                  </tr>
+                  <tr>
+                    <td>limit</td>
+                    <td>Number</td>
+                    <td>Number of Result Per Page</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="res-param-heading">
+                <span>Response Params</span>
+              </div>
+
+              <div class="list-table-container">
+                <table class="list-table">
+                  <tr>
+                    <th>Param</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>error</td>
+                    <td>Boolean</td>
+                    <td>Error will be false if requist success</td>
+                  </tr>
+                  <tr>
+                    <td>data</td>
+                    <td>Object[]</td>
+                    <td>Array of question object</td>
+                  </tr>
+                  <tr>
+                    <td>id</td>
+                    <td>Number</td>
+                    <td>question id</td>
+                  </tr>
+                  <tr>
+                    <td>chapter_id</td>
+                    <td>Number</td>
+                    <td>Chapter id</td>
+                  </tr>
+                  <tr>
+                    <td>question</td>
+                    <td>String</td>
+                    <td>Question</td>
+                  </tr>
+                  <tr>
+                    <td>answer</td>
+                    <td>String</td>
+                    <td>Answer</td>
+                  </tr>
+                  <tr>
+                    <td>question_path</td>
+                    <td>String</td>
+                    <td>Path for get a questions</td>
+                  </tr>
+                  <tr>
+                    <td>pagination</td>
+                    <td>Object</td>
+                    <td>Pagination object</td>
+                  </tr>
+                  <tr>
+                    <td>total_result</td>
+                    <td>Number</td>
+                    <td>Total Result Number</td>
+                  </tr>
+                  <tr>
+                    <td>has_previous</td>
+                    <td>String</td>
+                    <td>Has Previous will be null if dosen't have previous page</td>
+                  </tr>
+                  <tr>
+                    <td>has_next</td>
+                    <td>String</td>
+                    <td>It will give next page path</td>
+                  </tr>
+                </table>
+              </div>
+              
+              <div class="res-param-heading">
+                <span>Response Example:</span>
+              </div>
+              <div class="codeDiv">
+                <textarea class="materialize-textarea codeBox" placeholder="Code" readonly>
+    200 OK
+    {
+    "error": false,
+    "data" : [
+                {
+                  "id": 1,
+                  "chapter_id": 1,
+                  "question": "Question 1"
+                  "answer": "Answer 1"
+                  "question_path" : "chapter/1/question/1"
+                },
+                  "id": 1,
+                  "chapter_id": 2,
+                  "question": "Question 1"
+                  "answer": "Answer 1"
+                  "question_path" : "chapter/2/question/1"
+                },
+                  "id": 3,
+                  "chapter_id": 3,
+                  "question": "Question 3"
+                  "answer": "Answer 3"
+                  "question_path" : "chapter/3/question/3"
+                }
+            ],
+            "pagination": {
+                  "total_result": 32,
+                  "has_previous": null,
+                  "has_next": "chapters/1/questions?page=2&limit=10"
+            }
+    }
+                </textarea>
+              </div>
+              <div class="section-description-bottom">
+                On Error <a href="#error-response">View Response</a>
+              </div>
+            </div>
+            <!-- Get Questions End -->
+
+            <!-- Get Question Start -->
+            <div id="get-question" class="scrollspy">
+              <div class="section-sub-heading">
+                <span>Get Question</span>
+              </div>
+              <div class="url-container">
+                <div class="method">Get</div>
+                /chapter/:chapter_id/questions
+              </div>
+              <div class="res-param-heading">
+                <span>Request Params</span>
+              </div>
+
+              <div class="list-table-container">
+                <table class="list-table">
+                  <tr>
+                    <th>Param</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>error</td>
+                    <td>Boolean</td>
+                    <td>Error will be false if request success</td>
+                  </tr>
+                  <tr>
+                    <td>data</td>
+                    <td>Object</td>
+                    <td>Question object</td>
+                  </tr>                
+                  <tr>
+                    <td>id</td>
+                    <td>Number</td>
+                    <td>Question id</td>
+                  </tr>                
+                  <tr>
+                    <td>chapter_id</td>
+                    <td>Number</td>
+                    <td>Chapter id</td>
+                  </tr>
+                  <tr>
+                    <td>question</td>
+                    <td>String</td>
+                    <td>Question</td>
+                  </tr>
+                  <tr>
+                    <td>answer</td>
+                    <td>String</td>
+                    <td>Answer</td>
+                  </tr>
+                  <tr>
+                    <td>question_path</td>
+                    <td>String</td>
+                    <td>Path for get a question</td>
+                  </tr>
+                </table>
+              </div>
+              
+              <div class="res-param-heading">
+                <span>Request Example:</span>
+              </div>
+              <div class="codeDiv">
+                <textarea class="materialize-textarea codeBox" placeholder="Code" readonly>
+    {
+    "error": false,
+    "data" :  {
+                  "id": 1,
+                  "chapter_id": 1,
+                  "question": "Question 1"
+                  "answer": "Answer 1"
+                  "question_path" : "chapter/1/question/1"
+                }
+    }
+                </textarea>
+              </div>
+              <div class="section-description-bottom">
+                On Error <a href="#error-response">View Response</a>
+              </div>
+            </div>
+            <!-- Get Question End -->
+
+            <!-- Add Question Start -->
+            <div id="post-question" class="scrollspy">
+              <div class="section-sub-heading">
+                <span> Add Question</span>
+              </div>
+              <div class="url-container">
+                <div class="method">Post</div>
+                /question
+              </div>
+
+              <div class="res-param-heading">
+                <span>Request Params</span>
+              </div>
+
+              <div class="list-table-container">
+                <table class="list-table">
+                  <tr>
+                    <th>Param</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>chapter_id</td>
+                    <td>Number</td>
+                    <td> Chapter Id</td>
+                  </tr>
+                  <tr>
+                    <td>question</td>
+                    <td>String</td>
+                    <td>Question</td>
+                  </tr>
+                  <tr>
+                    <td>answer</td>
+                    <td>String</td>
+                    <td>Answer</td>
+                  </tr>
+                </table>
+              </div>
+              
+              <div class="res-param-heading">
+                <span>Request Example:</span>
+              </div>
+              <div class="codeDiv">
+                <textarea class="materialize-textarea codeBox" placeholder="Code" readonly>
+    {
+    "chapter_id": 1,
+    "question": "Question 1",
+    "answer": "Answer 1"
+    }          
+                </textarea>
+              </div>
+              <div class="section-description-bottom">
+                On Success <a href="#success-response">View Response</a> <b>OR</b> 
+                On Error <a href="#error-response">View Response</a>
+            </div>
+            </div>
+            <!-- Add Question End -->
+
+            <!-- Update Question Start -->
+            <div id="put-question" class="scrollspy">
+              <div class="section-sub-heading">
+                <span>Update Question</span>
+              </div>
+              <div class="url-container">
+                <div class="method">Put</div>
+                /question/:id
+              </div>
+              <div class="res-param-heading">
+                <span>URL Params</span>
+              </div>
+
+              <div class="list-table-container">
+                <table class="list-table">
+                  <tr>
+                    <th>Param</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>id</td>
+                    <td>Number</td>
+                    <td>Question id</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="res-param-heading">
+                <span>Request Params</span>
+              </div>
+
+              <div class="list-table-container">
+                <table class="list-table">
+                  <tr>
+                    <th>Param</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>chapter_id</td>
+                    <td>Number</td>
+                    <td> Chapter Id</td>
+                  </tr>
+                  <tr>
+                    <td>question</td>
+                    <td>String</td>
+                    <td>Question</td>
+                  </tr>
+                  <tr>
+                    <td>answer</td>
+                    <td>String</td>
+                    <td>Answer</td>
+                  </tr>
+                </table>
+              </div>
+              
+              <div class="res-param-heading">
+                <span>Request Example:</span>
+              </div>
+              <div class="codeDiv">
+                <textarea class="materialize-textarea codeBox" placeholder="Code" readonly>
+    {
+    "chapter_id": 1,
+    "question": "Question 1",
+    "answer": "Answer 1"
+    }          
+                </textarea>
+              </div>
+              <div class="section-description-bottom">
+                On Success <a href="#success-response">View Response</a> <b>OR</b> 
+                On Error <a href="#error-response">View Response</a>
+            </div>
+            </div>
+            <!-- Update Question End -->
+
+            <!-- Delete Question Start -->
+            <div id="delete-question" class="scrollspy">
+              <div class="section-sub-heading">
+                <span>Delete Question</span>
+              </div>
+              <div class="url-container">
+                <div class="method">Delete</div>
+                /question/:id
+              </div>
+              <div class="res-param-heading">
+                <span>URL Params</span>
+              </div>
+
+              <div class="list-table-container">
+                <table class="list-table">
+                  <tr>
+                    <th>Param</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>id</td>
+                    <td>Number</td>
+                    <td>Question id</td>
+                  </tr>
+                  </tr>
+                </table>
+              </div>
+              <div class="section-description-bottom" style="margin: 5px 0px;">
+                  On Success <a href="#success-response">View Response</a> <b>OR</b> 
+                  On Error <a href="#error-response">View Response</a>
+              </div>
+            </div>
+            <!-- Delete Question End -->
+
+          </div>
+        </div>
+      </section>
+      <!-- Questions Section End -->
+
+        <!-- Success Resonse Start -->
+        <section id="success-response" class="section scrollspy">
+          <div class="container">
+            <div>
+              <div id="SuccessResponse" class="section-heading">
+                <span>Success Response</span>
+              </div>
+              <div class="res-param-heading">
+                <span>Response Params</span>
+              </div>
+              <div class="list-table-container">
+                <table class="list-table">
+                  <tr>
+                    <th>Param</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>error</td>
+                    <td>Boolean</td>
+                    <td>If request success it will be false</td>
+                  </tr>
+                  <tr>
+                    <td>result</td>
+                    <td>String</td>
+                    <td>Success Message</td>
+                  </tr>
+                  </tr>
+                </table>
+              </div>
+              
+              <div class="res-param-heading">
+                <span>Response Example:</span>
+              </div>
+              <div class="codeDiv">
+                <textarea class="materialize-textarea codeBox" placeholder="Code" readonly>
+    {
+    "error": false,
+    "result": "Success Message"
+    }
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Success Resonse End -->
+
+        <!-- Error Response Start -->
+        <section id="error-response" class="section scrollspy" style="height: 87vh;">
+          <div class="container">
+            <div>
+              <div id="ErrorResponse" class="section-heading">
+                <span>Error Response</span>
+              </div>
+              <div class="res-param-heading">
+                <span>Response Params</span>
+              </div>
+              <div class="list-table-container">
+                <table class="list-table">
+                  <tr>
+                    <th>Param</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>error</td>
+                    <td>Boolean</td>
+                    <td>If request not success it will be true</td>
+                  </tr>
+                  <tr>
+                    <td>result</td>
+                    <td>String</td>
+                    <td>Error Message</td>
+                  </tr>
+                  </tr>
+                </table>
+              </div>
+              
+              <div class="res-param-heading">
+                <span>Response Example:</span>
+              </div>
+
+              <div class="codeDiv">
+                <textarea class="materialize-textarea codeBox" placeholder="Code" readonly>
+    {
+    "error": true,
+    "result": "Error Message"
+    }
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Error Response End -->
+      </div>
+
+      <footer>
+        <div class="footer">
+          <span>Design By <a href="https://softwarerex.com">SoftwareRex</a></span>
+        </div>
+      </footer>
+    </div>
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="js/materialize.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

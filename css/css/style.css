@@ -1,0 +1,300 @@
+:root {
+  --white-text-color: #ffffffe0;
+  --black-text-color: #212121eb;
+
+  --table-bg: #c5e8c7;
+  --table-text-color: #212121eb;
+
+  --section-heading-bg: rgb(91 81 177);
+  --details-box-bg: #c5e8c7;
+  --url-container-bg: #212121eb;
+  --section-sub-heading-bg: rgb(1 165 104);
+  --params-header-bg: rgb(8 187 31 / 55%);
+
+  --code-box-bg: #c5e8c7;
+
+  --border-color: #646464a6;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+.preloader {
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.content-area {
+  display: none;
+}
+.top-nav,
+.footer,
+.content {
+  padding-left: 300px;
+}
+
+.container {
+  width: 99% !important;
+}
+.header {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.top-nav {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+  height: 62px !important;
+  position: fixed !important;
+  top: 0px !important;
+  background-color: rgb(87 72 220) !important;
+}
+.nav-wrapper {
+  text-align: center;
+  padding-top: 13px;
+}
+.header-title {
+  font-size: 2.3rem;
+  margin: 0;
+  line-height: 100% !important;
+  white-space: nowrap !important;
+  font-weight: 500;
+}
+
+.sidenav-trigger i {
+  height: 64px;
+  line-height: 64px;
+}
+a.sidenav-trigger.top-nav {
+  position: absolute;
+  text-align: center;
+  height: 60px;
+  width: 60px;
+  top: 3px;
+  float: none;
+  color: white;
+  font-size: 36px;
+  z-index: 2;
+}
+
+a.sidenav-trigger.top-nav i {
+  font-size: 32px;
+}
+
+#authentication {
+  margin-top: 66px;
+}
+
+.side-nav-close {
+  color: rgba(37, 37, 37, 0.719);
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+}
+.side-nav-close i {
+  font-size: 17px;
+  border: 1px solid gray;
+  border-radius: 50%;
+}
+.side-nav-close span {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.sidenav-top {
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: green;
+}
+.side-nav-close:hover {
+  background-color: #3131311e;
+}
+
+/* Table & Code Box CSS Start */
+.section {
+  padding: 0 !important;
+}
+
+.section-heading {
+  text-align: left;
+  background-color: var(--section-heading-bg);
+  color: var(--white-text-color);
+  cursor: pointer;
+}
+.section-heading span {
+  font-size: 2rem;
+  line-height: 56px;
+  padding-left: 5px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.section-description-top {
+  background-color: var(--details-box-bg);
+  color: (--black-text-color);
+  font-size: 18px;
+  padding: 10px;
+  margin-top: 5px;
+}
+.section-description-bottom {
+  background-color: var(--details-box-bg);
+  color: (--black-text-color);
+  font-size: 18px;
+  padding: 10px;
+  margin-bottom: 5px 0px !important;
+}
+.section-sub-heading {
+  text-align: left;
+  background-color: var(--section-sub-heading-bg);
+  color: var(--white-text-color);
+  margin-top: 5px;
+  cursor: pointer;
+}
+.section-sub-heading span {
+  font-size: 1.6rem;
+  line-height: 45px;
+  padding-left: 5px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.res-param-heading {
+  text-align: left;
+  background-color: var(--params-header-bg);
+  color: var(--black-text-color);
+  margin: 5px 0px 0px 0px;
+  cursor: pointer;
+}
+.res-param-heading span {
+  font-size: 1.6rem;
+  line-height: 40px;
+  padding-left: 5px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.url-container {
+  background-color: var(--url-container-bg);
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.method {
+  background: white;
+  color: var(--black-text-color);
+  padding: 2px 6px;
+  margin-right: 15px;
+  text-transform: uppercase;
+}
+/* CodeBox CSS Code Start */
+.codeBox {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 18px;
+  background-color: var(--code-box-bg) !important;
+  min-height: 150px !important;
+  width: 100% !important;
+  padding: 8px !important;
+  outline: none !important;
+  overflow-y: scroll !important;
+  border: 1px solid var(--border-color) !important;
+  margin-bottom: 0px !important;
+}
+/* CodeBox CSS Code End */
+table {
+  width: 100%;
+  font-size: 18px;
+  border-collapse: collapse;
+}
+th {
+  border: 1px solid var(--border-color);
+  color: var(--table-text-color);
+  padding: 5px;
+  background-color: var(--table-bg);
+  height: 45px;
+}
+td {
+  border: 1px solid var(--border-color);
+  color: var(--table-text-color);
+  padding: 5px;
+  background-color: var(--table-bg);
+  height: 45px;
+}
+tr {
+  height: 45px;
+}
+
+/* Table & Code Box CSS End */
+
+.footer {
+  text-align: center;
+  background-color: rgb(87 72 220) !important;
+  line-height: 35px;
+  height: 35px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.footer span a {
+  color: springgreen;
+}
+.footer span a:hover {
+  color: rgb(158, 200, 255);
+}
+
+@media only screen and (max-width: 992px) {
+  .top-nav {
+    position: fixed !important;
+  }
+  .top-nav,
+  .footer,
+  .content {
+    padding-left: 0px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .top-nav {
+    height: 58px !important;
+  }
+  .nav-wrapper {
+    padding-top: 10px;
+  }
+  #authentication {
+    margin-top: 63px !important;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .container {
+    width: 98% !important;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  nav .sidenav-trigger {
+    margin: 0px;
+  }
+  .header-title {
+    padding-left: 30px !important;
+  }
+}
