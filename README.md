@@ -24,13 +24,13 @@ $ bundle install
 
 ### 2. run pending migrations
 ```bash
-$ bundle rails db:migrate
+$ rails db:migrate
 ```
 
 
 ### 6. start the app
 ```bash
-$ bundle rails server
+$ rails server
 ```
 
 And head over to [http://localhost:3000/docs](http://localhost:3000/docs) to
