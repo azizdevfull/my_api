@@ -1,5 +1,6 @@
 # My_api
 
+[My Api demo](http://api-rails-v2.herokuapp.com/)
 
 ***
 
