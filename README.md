@@ -33,9 +33,6 @@ $ rails db:migrate
 $ rails server
 ```
 
-And head over to [http://localhost:3000/docs](http://localhost:3000/docs) to
-interact with the api.
-
 ## useful documentation:
 - [CHANGELOG.md](./CHANGELOG.md)
 - [CONFIG.md](./CONFIG.md)
