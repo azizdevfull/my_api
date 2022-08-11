@@ -34,8 +34,3 @@ $ rails db:migrate
 $ rails server
 ```
 
-## useful documentation:
-- [CHANGELOG.md](./CHANGELOG.md)
-- [CONFIG.md](./CONFIG.md)
-- [CONTRIBUTING.md](./CONTRIBUTING.md)
-- [MONITORING.md](./MONITORING.md)
